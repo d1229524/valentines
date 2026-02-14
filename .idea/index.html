@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>happy valentine's day :3</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="video-background-container">
+  <video id="backgroundVideo" autoplay loop muted playsinline></video>
+  <div class="video-overlay"></div>
+</div>
+
+<div id="homePage" class="page active">
+  <header>
+    <h1>Audrey wants to send you a message...</h1>
+    <button id="openMessageLauncher" class="open-msg-btn">Open Me!</button>
+  </header>
+  <main>
+
+  </main>
+</div>
+
+<div id="playerPage" class="page">
+  <button id="backToHomeBtn" class="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+  <div class="music-player-container">
+    <div class="music-player-box">
+      <div class="player-header">
+        <img id="albumArt" src="https://placehold.co/100x100/3a3a4e/e0e0e0?text=Art" alt="Album Art" class="album-art-player">
+        <div class="track-info-player">
+          <h2 id="playerTrackTitle">Song Title</h2>
+          <p id="playerTrackArtist">Artist Name</p>
+        </div>
+      </div>
+
+      <div id="lyricsContainer" class="lyrics-container">
+        <p>Lyrics will appear here...</p>
+      </div>
+
+      <div class="player-controls">
+        <div class="progress-section-player">
+          <div id="playerProgressBarContainer" class="progress-bar-container-player">
+            <div id="playerProgressBar" class="progress-bar-player"></div>
+          </div>
+          <div class="time-display-player">
+            <span id="playerCurrentTime">0:00</span>
+            <span id="playerTotalDuration">0:00</span>
+          </div>
+        </div>
+
+        <div class="main-controls-player">
+          <button id="playerPrevBtn" class="control-btn-player"><i class="fas fa-backward-step"></i></button>
+          <button id="playerPlayPauseBtn" class="control-btn-player play-pause-player"><i class="fas fa-play"></i></button>
+          <button id="playerNextBtn" class="control-btn-player"><i class="fas fa-forward-step"></i></button>
+        </div>
+
+        <div class="secondary-controls-player">
+          <button id="playerRepeatBtn" class="control-btn-player small-icon"><i class="fas fa-repeat"></i></button>
+          <button id="playerShuffleBtn" class="control-btn-player small-icon"><i class="fas fa-shuffle"></i></button>
+          <div class="volume-control-player">
+            <i class="fas fa-volume-down volume-icon-player"></i>
+            <input type="range" id="playerVolumeSlider" class="volume-slider-player" min="0" max="1" step="0.01" value="0.8">
+            <i class="fas fa-volume-up volume-icon-player ml-1"></i>
+          </div>
+          <div class="playback-speed-control">
+            <i class="fas fa-tachometer-alt speed-icon"></i>
+            <input type="range" id="playerSpeedSlider" class="speed-slider" min="0.5" max="2.0" step="0.25" value="1.0">
+            <span id="currentSpeedDisplay">1.0x</span>
+          </div>
+        </div>
+      </div>
+      <p class="footer-credit">i love you <3</p>
+    </div>
+  </div>
+</div>
+
+<!-- New message page -->
+<div id="messagePage" class="page">
+  <button id="backFromMessageBtn" class="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+  <div class="message-container">
+    <h2>Audrey wants to send you a message</h2>
+    <button id="openMessageBtn" class="play-from-detail-btn">Open</button>
+    <div id="letter" class="letter" aria-hidden="true">
+      <div class="letter-inner">
+        <p>Hi....,</p>
+        <p>It's a little funny how short "one month" sounds on paper, because somehow it already feels like we've known each other for so much longer than that. But at the same time, time really flies when I'm with you (I can't believe it's already been over than a month??), and in this short time we got to know each other, you've really become the favorite part of my day. You're someone I think of when something small happens, someone I want to tell every little thing to, someone who makes everything feel so much warmer and lighter, and the most important part of it all... you're someone who makes me veryy proud I'm able to call mine.</p>
+        <p>One of the things I didn't expect was how quickly and easy it feels to be myself with you. I love how we can be so soft and personal in one moment and then completely unserious the next. I love how we can talk about our future and then derail into something so stupid and autistic straight away and laugh until my stomach hurts.</p>
+        <p>There's something so special about this in-between time frame, where everything feels really intentional and nothing is taken for granted, where we're still learning about each other and choosing each other at the same time. The fact that you've made it clear to me that you want something real, something serious, something with a future, so quickly and decisively means so much more to me than I think I've ever fully said out loud. I can't wait to make more plans with you and travel the world together with you.</p>
+        <p>I wish I could give you more but we're not together on Valentine's day so I made you this instead. I'm not sure if you remember this, but you once asked me whether I listen to the melody or the lyrics more when I'm listening to music, and my answer was lyrics. You already know that I'm someone that's awful at expressing their feelings verbally, so every song I picked in this playlist is something that reminds me of us, or something that I couldn't properly say. </p>
+        <p>I know we're still learning each other, but I'm really glad that it's you I get to learn. Thank you for always being so patient with me, for always making me laugh, for being so thoughtful, and for making something so unexpected feel meaningful so quickly. You always send me heartfelt messages and I've never been great at that so I'm writing you this letter instead. Consider this my long-form response of all the things I feel but don't always know how to articulate properly.</p>
+        <p>So... once again... happy valentine's day sayang. I love you so much and I can't wait to keep building our relationship with you.</p>
+        <p>Yours always,</p>
+        <p>Audrey</p>
+        <div style="text-align:right; margin-top: 0.5rem;">
+          <button id="letterNextBtn" class="play-from-detail-btn">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<audio id="audioPlayer"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
